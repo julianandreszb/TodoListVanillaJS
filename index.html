@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="script.js" defer></script>
+        <title>TODO List - Tailwindcss</title>
+    </head>
+    <body class="h-screen w-full bg-slate-50 flex justify-center items-center" >
+        <div id="divTodoWorkingArea" class="w-1/2 h-f bg-white drop-shadow-xl flex flex-col gap-y-2 p-10 justify-between mt-24" >
+            <div>
+                <div class="flex w-full justify-between" >
+                    <input id="inputTodoName" type="text" title="" placeholder="TODO TEXT" class="w-11/12 border-dashed border-2 border-sky-500 px-1" >
+                    <button id="buttonAddTodo" type="button" class="w-8 h-8 p-2 bg-cyan-400 text-white text-2xl p-0 " >+</button>
+                </div>
+                <ul id="ulTodoList" class="flex flex-col gap-y-2 mt-6" >
+                </ul>
+            </div>
+            <div class="flex flex-row h-8 w-full justify-between mt-6" >
+                <div class="relative w-2/4 h-8  text-center border-solid border-2 border-sky-500" >
+                    <div id="divTodoProgress" class="w-0 h-full bg-yellow-300" ></div>
+                    <p class="absolute bottom-0 left-1/4" ><span id="totalDoneTodos" >0</span> of <span id="totalTodos" >0</span> tasks done</p>
+                </div>
+                <div class="h-8 text-center" >
+                    <button id="buttonRemoveTodosChecked" class="bg-red-400 h-8 text-white px-2"><span>Remove Checked</span></button>
+                </div>
+            </div>
+        </div>
+
+        <div id="divEditTodo" class="fixed invisible flex flex-col w-1/3 h-1/3 bg-blue-100 p-10 drop-shadow-2xl justify-between" >
+            <input type="text" title="" placeholder="TODO TEXT" class="w-full border-dashed border-2 border-sky-500 px-1" >
+            <div class="w-full flex justify-end gap-x-2" >
+                <button id="buttonCancelDialogEditTodo" type="button" class="bg-red-400 h-8 text-white px-2"><span>Cancel</span></button>
+                <button id="buttonConfirmDialogEditTodo" type="button" class="bg-cyan-400 h-8 text-white px-2"><span>Save</span></button>
+            </div>
+        </div>
+
+    </body>
+</html>
